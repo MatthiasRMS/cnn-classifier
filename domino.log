@@ -1,0 +1,42 @@
+2016-06-19 12:33:47,332 CEST  INFO Domino - ================================================================================
+2016-06-19 12:33:47,352 CEST  INFO Domino - Starting client. BuildInfo=name: common, version: 1.34.0.0, scalaVersion: 2.10.4, sbtVersion: 0.13.5, buildNumber: 322, gitCommit: bc9b58a73bc9b8303e3dfbbbd2c697dd599f1507, buildTime: 2016-06-05
+2016-06-19 12:33:47,353 CEST DEBUG Domino - CWD = /Users/Matthias/code/MatthiasRMS/cnn-classifier
+2016-06-19 12:33:47,354 CEST  INFO Domino - executing command: run eval.py
+2016-06-19 12:33:48,929 CEST  INFO Domino - Verifying that the cloud update URL isn't being used.
+2016-06-19 12:33:48,950 CEST  INFO Domino - Cloud update URL not in use.
+2016-06-19 12:33:49,136 CEST  INFO Domino - Verifying that the cloud update URL isn't being used.
+2016-06-19 12:33:49,137 CEST  INFO Domino - Cloud update URL not in use.
+2016-06-19 12:33:49,138 CEST  INFO Domino - Verifying that the cloud update URL isn't being used.
+2016-06-19 12:33:49,138 CEST  INFO Domino - Cloud update URL not in use.
+2016-06-19 12:33:49,154 CEST DEBUG DefaultTransport - Issuing request to https://trial.dominodatalab.com/logClientUserError with proxy detected as DIRECT (full request = Request(POST,<function2>,<function1>,List((version,1.34.0.0 (build 322)), (cwd,/Users/Matthias/code/MatthiasRMS/cnn-classifier), (args,run eval.py), (stackTrace,com.cerebro.domino.common.UserErrorException: You have multiple files in your project that resolve to the same underlying canonical file (see the list below)
+This is probably because you have a symlink pointing to another file also in your project,
+or multiple symlinks pointing to the same file. Unfortunately, Domino currently doesn't support these use cases.
+
+Duplicate canonical files:
+   "/Users/Matthias/code/MatthiasRMS/cnn-classifier/bin/python"
+   "/Users/Matthias/code/MatthiasRMS/cnn-classifier/bin/python3"
+   "/Users/Matthias/code/MatthiasRMS/cnn-classifier/bin/python3.5"
+	at com.cerebro.domino.common.sync.LockedLocalFileDirectoryStructure$$anonfun$assertNoDuplicateCanonicalPaths$2.apply(LockedLocalFileDirectoryStructure.scala:136)
+	at com.cerebro.domino.common.sync.LockedLocalFileDirectoryStructure$$anonfun$assertNoDuplicateCanonicalPaths$2.apply(LockedLocalFileDirectoryStructure.scala:135)
+	at scala.Option$WithFilter.foreach(Option.scala:208)
+	at com.cerebro.domino.common.sync.LockedLocalFileDirectoryStructure$.assertNoDuplicateCanonicalPaths(LockedLocalFileDirectoryStructure.scala:135)
+	at com.cerebro.domino.common.sync.LockedLocalFileDirectoryStructure$.fromFiles(LockedLocalFileDirectoryStructure.scala:119)
+	at com.cerebro.domino.common.sync.LocalFileDirectory.withTrackedFilesLocked(LocalFileDirectory.scala:30)
+	at com.cerebro.domino.client.Domino.promptNoLockFileIfTooManyFiles(Domino.scala:251)
+	at com.cerebro.domino.client.Domino.executeCommand(Domino.scala:127)
+	at com.cerebro.domino.client.Domino$.main(Domino.scala:33)
+	at com.cerebro.domino.client.Domino.main(Domino.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.exe4j.runtime.LauncherEngine.launch(Unknown Source)
+	at com.install4j.runtime.launcher.Launcher.main(Unknown Source)
+), (message,You have multiple files in your project that resolve to the same underlying canonical file (see the list below)
+This is probably because you have a symlink pointing to another file also in your project,
+or multiple symlinks pointing to the same file. Unfortunately, Domino currently doesn't support these use cases.
+
+Duplicate canonical files:
+   "/Users/Matthias/code/MatthiasRMS/cnn-classifier/bin/python"
+   "/Users/Matthias/code/MatthiasRMS/cnn-classifier/bin/python3"
+   "/Users/Matthias/code/MatthiasRMS/cnn-classifier/bin/python3.5")),List((X-Domino-Api-Key,[API key redacted]), (Charset,UTF-8), (Content-Type,application/x-www-form-urlencoded), (content-type,application/x-www-form-urlencoded)),List(<function1>, <function1>, <function1>, <function1>, <function1>),DIRECT,UTF-8,4096))

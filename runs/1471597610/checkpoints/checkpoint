@@ -1,0 +1,3 @@
+model_checkpoint_path: "/Users/Matthias/code/MatthiasRMS/cnn-classifier/runs/1471597610/checkpoints/model-200"
+all_model_checkpoint_paths: "/Users/Matthias/code/MatthiasRMS/cnn-classifier/runs/1471597610/checkpoints/model-100"
+all_model_checkpoint_paths: "/Users/Matthias/code/MatthiasRMS/cnn-classifier/runs/1471597610/checkpoints/model-200"
