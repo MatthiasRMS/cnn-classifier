@@ -34,8 +34,8 @@ if FLAGS.eval_train:
     x_raw, y_test = data_helpers.load_data_and_labels()
     y_test = np.argmax(y_test, axis=1)
 else:
-    x_raw = ["Je veux retourner mon produit achete", "Ou en est ma commande"]
-    y_test = [1, 0]
+    x_raw = ["Je veux retourner mon produit achete", "Ou en est ma commande ?", "Retourner mon dernier achat", "suivi de commande"]
+    y_test = [1, 0, 1, 0]
 
 # Map data into vocabulary
 vocab_path = os.path.join(FLAGS.checkpoint_dir, "..", "vocab")
@@ -78,6 +78,7 @@ with graph.as_default():
 
 # Print accuracy if y_test is defined
 if y_test is not None:
+    print(all_predictions)
     correct_predictions = float(sum(all_predictions == y_test))
     print("Total number of test examples: {}".format(len(y_test)))
     print("Accuracy: {:g}".format(correct_predictions/float(len(y_test))))
